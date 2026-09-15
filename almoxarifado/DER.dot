@@ -1,0 +1,9 @@
+digraph DER {
+  graph [rankdir=LR, bgcolor="white", fontname="Arial"];
+  node [shape=plain, fontname="Arial"];
+  usuarios [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0"><TR><TD BGCOLOR="#1d4ed8"><FONT COLOR="white"><B>USUARIOS</B></FONT></TD></TR><TR><TD ALIGN="LEFT">PK id : INTEGER</TD></TR><TR><TD ALIGN="LEFT">nome : TEXT</TD></TR><TR><TD ALIGN="LEFT">usuario : TEXT UNIQUE</TD></TR><TR><TD ALIGN="LEFT">senha : TEXT</TD></TR></TABLE>>];
+  produtos [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0"><TR><TD BGCOLOR="#1d4ed8"><FONT COLOR="white"><B>PRODUTOS</B></FONT></TD></TR><TR><TD ALIGN="LEFT">PK id : INTEGER</TD></TR><TR><TD ALIGN="LEFT">codigo : TEXT UNIQUE</TD></TR><TR><TD ALIGN="LEFT">nome : TEXT</TD></TR><TR><TD ALIGN="LEFT">categoria : TEXT</TD></TR><TR><TD ALIGN="LEFT">unidade : TEXT</TD></TR><TR><TD ALIGN="LEFT">estoque_atual : INTEGER</TD></TR><TR><TD ALIGN="LEFT">estoque_minimo : INTEGER</TD></TR></TABLE>>];
+  movimentacoes [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0"><TR><TD BGCOLOR="#1d4ed8"><FONT COLOR="white"><B>MOVIMENTACOES</B></FONT></TD></TR><TR><TD ALIGN="LEFT">PK id : INTEGER</TD></TR><TR><TD ALIGN="LEFT">FK produto_id : INTEGER</TD></TR><TR><TD ALIGN="LEFT">FK usuario_id : INTEGER</TD></TR><TR><TD ALIGN="LEFT">tipo : TEXT</TD></TR><TR><TD ALIGN="LEFT">quantidade : INTEGER</TD></TR><TR><TD ALIGN="LEFT">data_movimentacao : TEXT</TD></TR></TABLE>>];
+  produtos -> movimentacoes [label="1:N"];
+  usuarios -> movimentacoes [label="1:N"];
+}
