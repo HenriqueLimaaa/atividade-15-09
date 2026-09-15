@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<style>text{font-family:Arial,sans-serif;fill:#222}.box{fill:#f5f5f5;stroke:#555;stroke-width:2}.title{font-weight:bold;font-size:20px}.field{font-size:15px}</style>
+<rect class="box" x="30" y="80" width="240" height="220" rx="12"/><text class="title" x="50" y="110">USUARIOS</text>
+<text class="field" x="50" y="140">PK id</text><text class="field" x="50" y="165">nome</text><text class="field" x="50" y="190">usuario UNIQUE</text><text class="field" x="50" y="215">senha</text><text class="field" x="50" y="240">perfil</text>
+<rect class="box" x="330" y="55" width="240" height="270" rx="12"/><text class="title" x="350" y="85">MOVIMENTACOES</text>
+<text class="field" x="350" y="115">PK id</text><text class="field" x="350" y="140">FK produto_id</text><text class="field" x="350" y="165">FK usuario_id</text><text class="field" x="350" y="190">tipo</text><text class="field" x="350" y="215">quantidade</text><text class="field" x="350" y="240">data_movimentacao</text><text class="field" x="350" y="265">observacao</text>
+<rect class="box" x="630" y="55" width="240" height="270" rx="12"/><text class="title" x="650" y="85">PRODUTOS</text>
+<text class="field" x="650" y="115">PK id</text><text class="field" x="650" y="140">codigo UNIQUE</text><text class="field" x="650" y="165">nome</text><text class="field" x="650" y="190">categoria</text><text class="field" x="650" y="215">unidade</text><text class="field" x="650" y="240">quantidade</text><text class="field" x="650" y="265">estoque_minimo</text>
+<line x1="270" y1="170" x2="330" y2="170" stroke="#555" stroke-width="2"/><text x="275" y="158">1:N</text>
+<line x1="570" y1="170" x2="630" y2="170" stroke="#555" stroke-width="2"/><text x="575" y="158">N:1</text>
+</svg>

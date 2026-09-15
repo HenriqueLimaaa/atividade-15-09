@@ -1,0 +1,9 @@
+digraph DER {
+  graph [rankdir=LR, bgcolor="white", label="DER — Sistema de Gestão de Almoxarifado", labelloc=t, fontsize=20];
+  node [shape=record, style="rounded,filled", fillcolor="#f5f5f5", fontname="Arial"];
+  usuarios [label="{USUARIOS|id PK\lnome\lusuario UNIQUE\lsenha\lperfil\l}"];
+  produtos [label="{PRODUTOS|id PK\lcodigo UNIQUE\lnome\lcategoria\lunidade\lquantidade\lestoque_minimo\lcriado_em\l}"];
+  movimentacoes [label="{MOVIMENTACOES|id PK\lproduto_id FK\lusuario_id FK\ltipo\lquantidade\ldata_movimentacao\lobservacao\l}"];
+  usuarios -> movimentacoes [label="1:N"];
+  produtos -> movimentacoes [label="1:N"];
+}
